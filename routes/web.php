@@ -1,6 +1,8 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -15,5 +17,23 @@ use Illuminate\Support\Facades\Route;
 
 // * Ruta inicial.
 Route::get('/', function () {
-    return view('welcome');
+    return view('Pages.welcome');
 });
+
+Auth::routes(['verify' => true]); //Activa la verificación en las rutas para laravel/ui
+
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->middleware(['auth','verified'])->name('home');
+
+
+Route::get('/register', function () {
+    return view('auth.register');
+})->name('register');
+
+Route::get('/login', function () {
+    return view('auth.login');
+})->name('login');
+
+Route::get('/f', function () {
+    return view('auth.passwords.reset');
+})->name('reset');

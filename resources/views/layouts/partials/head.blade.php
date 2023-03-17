@@ -5,7 +5,7 @@
 <title>Education-app</title>
 
 <!-- Favicon-->
-<link rel="icon" type="image/x-icon" href="{{ asset('public/favicon.ico') }}" />
+<link rel="icon" type="image/x-icon" href="{{ asset('img/favicon.ico') }}" />
 
 <!-- Bootstrap icons-->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" rel="stylesheet">
@@ -18,5 +18,6 @@
     type="text/css" />
 
 <!-- Core theme CSS (includes Bootstrap)-->
+<link href="{{ asset('css/styles.css') }}" rel="stylesheet" />
 <link href="{{ asset('css/app.css') }}" rel="stylesheet" />
 
