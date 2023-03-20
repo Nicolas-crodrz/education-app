@@ -6,7 +6,7 @@
   </a>
 
   <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-      <li><a href="#" class="hola nav-link px-2">{{ __('Home') }}</a></li>
+      <li><a href="{{route('home')}}" class="hola nav-link px-2">{{ __('Home') }}</a></li>
       <li><a href="#" class="nav-link px-2 link-dark">{{ __('Cursos') }}</a></li>
       <li><a href="#" class="nav-link px-2 link-dark">{{ __('Noticias') }}</a></li>
       <li><a href="#" class="nav-link px-2 link-dark">{{ __('About') }}</a></li>
@@ -20,15 +20,16 @@
   @else <!-- Si esta logueado -->
   <ul class="nav col-md-auto mb-2 justify-content-center mb-md-0">
       <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle bi bi-person-circle" href="#" id="navbarDropdownMenuLink" role="button"
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
               data-bs-toggle="dropdown" aria-expanded="false">
-              {{ Auth::user()->name }}
+                <img src="https://robohash.org/{{ Auth::user()->name }}" alt="Avatar" class="avatar" width="50px" height="50px">
+                {{ Auth::user()->name }}
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <li><a class="dropdown-item bi bi-car-front" href="#"> {{ __('My rides') }}</a></li>
               <li><a class="dropdown-item bi bi-chat" href="#"> {{ __('Messages') }}</a></li>
               <li><a class="dropdown-item bi bi-credit-card" href="#"> {{ __('Payments') }}</a></li>
-              <li><a class="dropdown-item bi bi-person-circle" href="#"> {{ __('Profile') }}</a></li>
+              <li><a class="dropdown-item bi bi-person-circle" href="{{route('profile')}}"> {{ __('Profile') }}</a></li>
               <li>
                   <a class="dropdown-item bi bi-door-closed" href="{{ route('logout') }}"
                       onclick="event.preventDefault();

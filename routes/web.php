@@ -34,6 +34,14 @@ Route::get('/login', function () {
     return view('auth.login');
 })->name('login');
 
+Route::get('/profile', function () {
+    return view('Pages.profile');
+})->name('profile');
+
+
+
+// ! PRUEBA: Ruta para el formulario de recuperación de contraseña.
 Route::get('/f', function () {
     return view('auth.passwords.reset');
 })->name('reset');
+
