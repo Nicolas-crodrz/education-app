@@ -38,6 +38,9 @@ Route::get('/profile', function () {
     return view('Pages.profile');
 })->name('profile');
 
+Route::get('/adminPanel', function () {
+    return view('Pages.adminPanel');
+})->name('adminPanel');
 
 
 // ! PRUEBA: Ruta para el formulario de recuperación de contraseña.

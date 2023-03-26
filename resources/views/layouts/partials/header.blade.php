@@ -14,7 +14,7 @@
         @php $user = auth()->user() @endphp
         @can('before', $user)
             <!-- Mostrar contenido para administradores -->
-            <li><a href="#" class="nav-link px-2 link-dark">{{ __('Admin') }}</a></li>
+            <li><a href="{{route('adminPanel')}}" class="nav-link px-2 link-dark">{{ __('Admin') }}</a></li>
         @endcan
 
     </ul>
