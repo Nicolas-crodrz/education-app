@@ -5,7 +5,8 @@
         <div class="row">
             <div class="col-md-3 border-right">
                 <div class="d-flex flex-column align-items-center text-center p-3 py-5">
-                  <img src="https://robohash.org/{{ Auth::user()->name }}" alt="Avatar" class="avatar" width="200px" height="200px">
+                  {{-- <img src="https://robohash.org/{{ Auth::user()->name }}" alt="Avatar" class="avatar" width="200px" height="200px"> --}}
+                  <img src="https://ui-avatars.com/api/?name={{ Auth::user()->name }}+{{ Auth::user()->lastname }}" alt="Avatar" class="avatar img-thumbnail rounded-circle" width="100px" height="100px">
                         <span
                         class="font-weight-bold">{{ Auth::user()->name }}</span><span class="text-black-50">{{ Auth::user()->email }}</span><span>
                     </span></div>

@@ -19,4 +19,23 @@ body {
 }
 limarker {
   color: #fff;
+}
+
+.avatar {
+  border-radius: 50%;
+}
+.avatarhover {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }/*# sourceMappingURL=app.css.map */

@@ -79,7 +79,8 @@ Route::post('/createUsers', function (Illuminate\Http\Request $request) {
     $user->lastname = $request->lastname;
     $user->email = $request->email;
     $user->email_verified_at = now();
-    $user->password = $request->password;
+    // encripta la contraseña
+    $user->password = bcrypt($request->password);
     // Busca la cadena correspondiente para el valor numérico seleccionado en el desplegable
     $user->role = $roleOptions[$request->role];
     $user->save();
@@ -129,6 +130,19 @@ Route::put('/editUser/{id}', function (Illuminate\Http\Request $request, $id) {
     $user->save();
     return redirect('/userList');
 })->name('editUser.store');
+
+//todo NOTA: Esta ruta te lleva a la vista para eliminar los usuarios.
+Route::get('/deleteUser/{id}', function ($id) {
+    $user = App\Models\User::find($id);
+    return view('adminPanel.deleteUser', compact('user'));
+})->name('deleteUser');
+
+Route::delete('/deleteUser/{id}', function ($id) {
+    $user = App\Models\User::find($id);
+    $user->delete();
+    return redirect('/userList');
+})->name('deleteUser.store');
+
 
 //--------------------------------------------------------------
 

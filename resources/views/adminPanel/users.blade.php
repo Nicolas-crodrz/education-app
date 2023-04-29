@@ -11,6 +11,7 @@
             background: hsla(0, 0%, 100%, 0.55);
             backdrop-filter: blur(30px);
             ">
+            <a href="{{ route('adminPanel') }}" class="btn btn-primary">Back to Admin Panel</a>
                     <div class="card-body pt-2 shadow-5 text-center">
                         <h2 class="fw-bold mb-5"> {{ __('Sign up now') }}</h2>
                         <form method="POST" action="{{ route('users') }}">

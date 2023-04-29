@@ -1,5 +1,8 @@
 @extends('layouts.partials.head')
 <h1>List of Users</h1>
+
+<a href="{{ route('adminPanel') }}" class="btn btn-primary">Back to Admin Panel</a>
+
 <div class="table-responsive">
     <table class="table table-striped">
         <thead>
@@ -30,11 +33,11 @@
                       <a href="{{ route('editUser', $user->id) }}" class="btn btn-primary">Edit</a>
                   </td>
                   <td>
-                      <form action="" method="POST">
-                          @csrf
-                          @method('DELETE')
-                          <button type="submit" class="btn btn-danger">Delete</button>
-                      </form>
+                        <form action="{{ route('deleteUser', $user->id) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
                   </td>
               </tr>
                 </tr>

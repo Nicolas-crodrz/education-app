@@ -1,7 +1,8 @@
 @extends('layouts.partials.head')
 
     <h1>Edit User</h1>
-
+    <a href="{{ route('adminPanel') }}" class="btn btn-primary">Back to Admin Panel</a>
+    
     <form action="{{ route('editUser', $user->id) }}" method="POST">
         @csrf
         @method('PUT')

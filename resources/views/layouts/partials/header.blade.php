@@ -13,8 +13,8 @@
         <li><a href="#" class="nav-link px-2 link-dark">{{ __('About') }}</a></li>
         @php $user = auth()->user() @endphp
         @can('before', $user)
-            <!-- Mostrar contenido para administradores -->
-            <li><a href="{{route('adminPanel')}}" class="nav-link px-2 link-dark">{{ __('Admin') }}</a></li>
+            <!-- Mostrar contenido para administradores en otra pestaña -->
+            <li><a href="{{route('adminPanel')}}" class="nav-link px-2 link-dark" target="_blank">{{ __('Admin') }}</a></li>
         @endcan
 
     </ul>
@@ -31,8 +31,9 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                     data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="https://robohash.org/{{ Auth::user()->name }}" alt="Avatar" class="avatar" width="50px"
-                        height="50px">
+                    {{-- <img src="https://robohash.org/{{ Auth::user()->name }}" alt="Avatar" class="avatar" width="50px"
+                        height="50px"> --}}
+                        <img src="https://ui-avatars.com/api/?name={{ Auth::user()->name }}+{{ Auth::user()->lastname }}" alt="Avatar" class="avatar img-thumbnail rounded-circle" width="50px" height="50px">
                     {{ Auth::user()->name }}
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
