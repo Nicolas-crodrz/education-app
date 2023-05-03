@@ -1,20 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-    <div
-        style="
-     position: fixed;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 100%;
-     background-color: rgba(0, 0, 0, 0.5);
-     z-index: 1;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-
- ">
+    <div class="fondo">
         <div class="card bg-white" style="padding: 30px;">
             <div class="card-body">
                 <h1 class="text-center ">Login</h1>

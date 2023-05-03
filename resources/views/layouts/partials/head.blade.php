@@ -20,6 +20,6 @@
 <!-- Core theme CSS (includes Bootstrap)-->
 <link href="{{ asset('css/styles.css') }}" rel="stylesheet" />
 <link href="{{ asset('css/app.css') }}" rel="stylesheet" />
-<link href="{{ asset('css/app2.css') }}" rel="stylesheet" />
+<link href="{{ asset('css/appForce.css') }}" rel="stylesheet" />
 
 

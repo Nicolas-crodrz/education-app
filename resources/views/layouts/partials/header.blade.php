@@ -7,14 +7,14 @@
     </a>
 
     <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-        <li><a href="{{ route('home') }}" class="hola nav-link px-2">{{ __('Home') }}</a></li>
-        <li><a href="#" class="nav-link px-2 link-dark">{{ __('Cursos') }}</a></li>
-        <li><a href="#" class="nav-link px-2 link-dark">{{ __('Noticias') }}</a></li>
-        <li><a href="#" class="nav-link px-2 link-dark">{{ __('About') }}</a></li>
+        <li><a href="{{ route('home') }}" class="header-link nav-link px-2">{{ __('Home') }}</a></li>
+        <li><a href="#" class="header-link nav-link px-2 link-dark">{{ __('Cursos') }}</a></li>
+        <li><a href="#" class="header-link nav-link px-2 link-dark">{{ __('Noticias') }}</a></li>
+        <li><a href="#" class="header-link nav-link px-2 link-dark">{{ __('About') }}</a></li>
         @php $user = auth()->user() @endphp
         @can('before', $user)
             <!-- Mostrar contenido para administradores en otra pestaña -->
-            <li><a href="{{route('adminPanel')}}" class="nav-link px-2 link-dark" target="_blank">{{ __('Admin') }}</a></li>
+            <li><a href="{{route('adminPanel')}}" class="header-link nav-link px-2 link-dark" target="_blank">{{ __('Admin') }}</a></li>
         @endcan
 
     </ul>
@@ -37,12 +37,12 @@
                     {{ Auth::user()->name }}
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <li><a class="dropdown-item bi bi-journals" href="#"> {{ __('My Courses') }}</a></li>
-                    <li><a class="dropdown-item bi bi-chat" href="#"> {{ __('Messages') }}</a></li>
-                    <li><a class="dropdown-item bi bi-person-circle" href="{{ route('profile') }}">
+                    <li><a class="icono-vibracion dropdown-item bi bi-journals" href="#"> {{ __('My Courses') }}</a></li>
+                    <li><a class="icono-vibracion dropdown-item bi bi-chat" href="#"> {{ __('Messages') }}</a></li>
+                    <li><a class="icono-vibracion dropdown-item bi bi-person-circle" href="{{ route('profile') }}">
                             {{ __('Profile') }}</a></li>
                     <li>
-                        <a class="dropdown-item bi bi-door-closed" href="{{ route('logout') }}"
+                        <a class="icono-vibracion dropdown-item bi bi-door-closed" href="{{ route('logout') }}"
                             onclick="event.preventDefault();
                           document.getElementById('logout-form').submit();">
                             {{ __('Logout') }}
