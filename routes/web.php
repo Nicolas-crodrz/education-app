@@ -6,16 +6,17 @@ use App\Http\Controllers\HomeController; // * Importa el controlador de la vista
 use App\Http\Controllers\UserController; // * Importa el controlador de la vista users.
 use App\Http\Controllers\UserListController; // * Importa el controlador de la vista userList.
 use App\Models\User; // * Importa el modelo de la tabla users.
+use App\Http\Controllers\CourseController; // * Importa el controlador de la vista courses.
 
 
 /*
 |--------------------------------------------------------------------------
-| Web Routes
+| RUTAS WEB
 |--------------------------------------------------------------------------
 |
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
+| Aquí es donde puede registrar rutas web para su aplicación. Estos
+| las rutas son cargadas por el RouteServiceProvider y todas ellas
+| asignarse al grupo de middleware "web". ¡Haz algo genial!
 |
 */
 
@@ -82,3 +83,11 @@ Route::get('/deleteUser/{id}', [UserController::class, 'deleteConfirmation'])->n
 Route::delete('/deleteUser/{id}', [UserController::class, 'destroy'])->name('deleteUser.store');
 
 //--------------------------------------------------------------
+
+//todo NOTA: Esta ruta te lleva a la vista para crear cursos.
+Route::get('/courses', [CourseController::class, 'index'])->name('courses.index');
+Route::get('/courses/create', [CourseController::class, 'create'])->name('courses.create');
+Route::post('/courses', [CourseController::class, 'store'])->name('courses.store');
+Route::get('/courses/{id}/edit', [CourseController::class, 'edit'])->name('courses.edit');
+Route::put('/courses/{id}', [CourseController::class, 'update'])->name('courses.update');
+Route::delete('/courses/{id}', [CourseController::class, 'destroy'])->name('courses.destroy');

@@ -22,6 +22,28 @@
             </div>
         </div>
     </a>
+
+        {{-- * Creacion de cursos --}}
+        <a href="{{ route('courses.create') }}">
+            <div class="card mt-3 ">
+                <div class="card-body">
+                    <h5 class="card-title">Crear cursos</h5>
+                    <p class="card-text">Haz clic aquí para crear cursos.</p>
+                </div>
+            </div>
+        </a>
+
+        {{-- * mostrar lista de cursos --}}
+        <a href="{{ route('courses.index') }}">
+            <div class="card mt-3 ">
+                <div class="card-body">
+                    <h5 class="card-title">Mostrar lista de cursos</h5>
+                    <p class="card-text">Haz clic aquí para mostrar la lista de cursos.</p>
+                </div>
+            </div>
+        </a>
+
+
 @endsection
 
 @section('css')

@@ -1,0 +1,140 @@
+//* CREAR CURSOS //
+.card {
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 50px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    padding: 10px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.error-container {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.course-form .form-group {
+    margin-bottom: 15px;
+}
+
+.course-form label {
+    font-weight: bold;
+}
+
+.course-form input[type="text"],
+.course-form textarea {
+    width: 100%;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.course-form button[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+//* ===================================================== //
+
+//* LISTAR CURSOS //
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.create-link {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.create-link:hover {
+    background-color: #0056b3;
+}
+
+.course-container {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.course-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.course-description {
+    margin-bottom: 10px;
+}
+
+.course-info {
+    margin-bottom: 10px;
+}
+
+.edit-link {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #3273ba;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.edit-link:hover {
+    background-color: #1c60a8;
+    color: #fff;
+}
+
+
+.delete-form {
+    display: inline-block;
+}
+
+.delete-button {
+    padding: 5px 10px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: #bd2130;
+}
+
+.create-link {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.create-link:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+//* ===================================================== //
